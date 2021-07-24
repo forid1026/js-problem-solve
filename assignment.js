@@ -1,3 +1,6 @@
+
+//https://github.com/forid1026/js-problem-solve
+
 function kilometerToMeter(km){
     var meter =  km * 1000;
     if(km < 0){
@@ -19,6 +22,7 @@ function budgetCalculator(watch, phone, laptop){
     var totalLaptopPrice = laptopPrice * laptop;
     var total = totalWatchPrice + totalPhonePrice + totalLaptopPrice;
 
+    //validation part
     if(watch < 0 || phone < 0 || laptop < 0){
         return 'negative value not be countable.';
 
@@ -50,6 +54,7 @@ function hotelCost(days){
 
     }
 
+    //validation part
     if(days < 0){
         return 'please enter a valid number! Negative value cannot accept';
     }
@@ -68,6 +73,11 @@ function megaFriend(friendName){
         var element = friendName[i];
         if( element.length > megaName.length){
             megaName = element;
+        }
+
+        //validation part
+        if(friendName[i] == "" || friendName[i] == " "){
+            return 'empty array not acceptable';
         }
     }
     return megaName;
